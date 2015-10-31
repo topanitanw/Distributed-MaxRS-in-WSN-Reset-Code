@@ -1,0 +1,6 @@
+* Demo0Reset
+  A program is to send the reset package to all telosbs in the demo0
+  project when the user button is pressed.
+
+  
+  
