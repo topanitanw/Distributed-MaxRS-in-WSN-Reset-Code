@@ -49,6 +49,8 @@ implementation // the implementation part
   event void Boot.booted() // when booted these functions will be called
   { 
     printf("\n\n\n\n-- Date: %s Time: %s --\n", __DATE__, __TIME__);
+    printf("-- T:0x%04X BROADCAST_CONSTANT: 0x%02X -- \n", 
+	   TOS_NODE_ID, BROADCAST_CONSTANT);
     /* printf("*** TOSH_DATA_LENGTH: %d ***\n", TOSH_DATA_LENGTH); */
     call AMControl.start();
     call CC2420Config.setPanAddr(1);
@@ -127,7 +129,7 @@ implementation // the implementation part
   { 
     radio_msg_0* pck0 = (radio_msg_0*) call Packet.getPayload(&packet, sizeof(radio_msg_0));
     pck0->type = 0;
-    pck0->flooding = 0xFF;
+    pck0->flooding = BROADCAST_CONSTANT;
     call AMSend.send(AM_BROADCAST_ADDR, 
 		     &packet, 
 		     sizeof(radio_msg_0));

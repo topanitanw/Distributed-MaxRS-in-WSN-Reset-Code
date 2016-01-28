@@ -7,49 +7,49 @@ typedef nx_struct radio_type_0_msg
   nx_uint8_t flooding;
 } radio_msg_0;
 
-typedef nx_struct radio_type_1_msg 
-{
-  nx_uint8_t type;
-  nx_uint8_t delay_s;
-  nx_uint8_t pck_type;
-} radio_msg_1;
+/* typedef nx_struct radio_type_1_msg  */
+/* { */
+/*   nx_uint8_t type; */
+/*   nx_uint8_t delay_s; */
+/*   nx_uint8_t pck_type; */
+/* } radio_msg_1; */
 
-typedef nx_struct radio_type_2_msg 
-{
-  nx_uint8_t type;
-  nx_uint16_t lsensor_reading;
-} radio_msg_2;
+/* typedef nx_struct radio_type_2_msg  */
+/* { */
+/*   nx_uint8_t type; */
+/*   nx_uint16_t lsensor_reading; */
+/* } radio_msg_2; */
 
-typedef nx_struct radio_type_3_msg 
-{
-  nx_uint8_t type;
-  nx_uint16_t tsensor_reading;
-} radio_msg_3;
+/* typedef nx_struct radio_type_3_msg  */
+/* { */
+/*   nx_uint8_t type; */
+/*   nx_uint16_t tsensor_reading; */
+/* } radio_msg_3; */
 
-typedef nx_struct radio_type_4_msg 
-{
-  nx_uint8_t type;
-  nx_uint16_t lsensor_reading;
-  nx_uint16_t tsensor_reading;
-} radio_msg_4;
+/* typedef nx_struct radio_type_4_msg  */
+/* { */
+/*   nx_uint8_t type; */
+/*   nx_uint16_t lsensor_reading; */
+/*   nx_uint16_t tsensor_reading; */
+/* } radio_msg_4; */
 
-typedef nx_struct radio_type_5_msg 
-{
-  nx_uint8_t type;
-  nx_uint16_t sensors_8[8];
-} radio_msg_5;
+/* typedef nx_struct radio_type_5_msg  */
+/* { */
+/*   nx_uint8_t type; */
+/*   nx_uint16_t sensors_8[8]; */
+/* } radio_msg_5; */
 
-typedef nx_struct radio_type_6_msg 
-{
-  nx_uint8_t type;
-  nx_uint16_t sensors_16[16];
-} radio_msg_6;
+/* typedef nx_struct radio_type_6_msg  */
+/* { */
+/*   nx_uint8_t type; */
+/*   nx_uint16_t sensors_16[16]; */
+/* } radio_msg_6; */
 
-typedef nx_struct radio_type_7_msg 
-{
-  nx_uint8_t type;
-  nx_uint16_t sensors_32[32];
-} radio_msg_7;
+/* typedef nx_struct radio_type_7_msg  */
+/* { */
+/*   nx_uint8_t type; */
+/*   nx_uint16_t sensors_32[32]; */
+/* } radio_msg_7; */
 
 // define constants based on telosb node id
 enum {
@@ -86,7 +86,7 @@ enum {
   AM_RADIO_SENSE_MSG = 0x41,   //  unit8_t in AM.h : 37 = 0x25
   // AM_BROADCAST_ADDR = 0xFFFF already defined in AM.h
   BASE_STATION_ID = 0x789B,    //  uint16_t in AM.h
-  FLOODING_CONSTANT = 0xFF,    //  flooding constant 8 bits
+  BROADCAST_CONSTANT = 0x7F,    //  flooding constant 8 bits
   LSENSOR_TH = 100, 
   TSENSOR_TH = 25
 };
