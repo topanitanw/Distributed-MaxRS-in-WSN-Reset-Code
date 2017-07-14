@@ -1,3 +1,6 @@
 COMPONENT=Demo0ResetAppC
-CFLAGS += -I$(TOSDIR)/lib/printf
-include $(MAKERULES)
+TINYOS_ROOT_DIR?=../..
+TINYOS_OS_DIR?=$(TINYOS_ROOT_DIR)/tos
+CFLAGS += -I$(TINYOS_OS_DIR)/lib/printf
+#include $(MAKERULES)
+include $(TINYOS_ROOT_DIR)/Makefile.include
